@@ -6,19 +6,19 @@
     <p class="ranking" *ngFor="let number of [1, 2, 3, 4, 5]">{{ number }}st</p>
   </div>
   <div class="rightmarketdiv">
-    <ng-container *ngFor="let ranking of ortedArr">
+    <ng-container *ngFor="let ranking of sortedRankingData">
       <div
-      class="sidedivs"
-      *ngIf="selectedMatrix.metrics === ranking.metric"
-      [appBlackbackground]="isdarkmodechecked === 'checked'"
-      [ngStyle]="{'border-left': ranking.percentage.startsWith('+') ? '4px solid #32cd32':'4px solid #df4a3f'}"
-    >
-      <p>{{ ranking.name }}</p>
-      <p>{{ ranking.price }}</p>
-      <p
-      [ngStyle]="{'color': ranking.percentage.startsWith('+') ? '#32cd32':'red'}"
-      >{{ ranking.percentage }}</p>
-    </div>
+        class="sidedivs"
+        *ngIf="selectedMatrix.metrics === ranking.metric"
+        [appBlackbackground]="isdarkmodechecked === 'checked'"
+        [ngStyle]="{'border-left': ranking.percentage.startsWith('+') ? '4px solid #32cd32' : '4px solid #df4a3f'}"
+      >
+        <p>{{ ranking.name }}</p>
+        <p>{{ ranking.price }}</p>
+        <p [ngStyle]="{ color: ranking.percentage.startsWith('+') ? '#32cd32' : 'red'}">
+          {{ ranking.percentage }}
+        </p>
+      </div>
     </ng-container>
   </div>
 </div>

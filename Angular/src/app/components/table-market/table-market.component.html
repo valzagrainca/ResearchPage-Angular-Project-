@@ -1,46 +1,43 @@
 <div style="height:377px; overflow-y: auto;">
-<table style="width:100%;" id="marketTable"
-[appBlackbackground]="isdarkmodechecked === 'checked'">
-  <tr class="tableHead">
-    <th [appBlackbackground]="isdarkmodechecked === 'checked'"></th>
-    <th *ngFor="let c of cities" [ngClass]="{ blackbackground: isdarkmodechecked === 'checked' }">
-      <p>{{c.city}}</p>
-      <p class="units">{{c.unit}}</p>
-    </th>
-  </tr>
-  <tbody >
-  <ng-container *ngFor="let data of marketdatas">
-  <tr id="rowhover"
-    (click)="selectedRow = data" 
-    [ngClass]="{'selected_row': selectedRow === data}"
-    *ngIf="data.show">
-    <td>{{data.metrics | uppercase}}</td>
-    <td>
-      <div class="data">
-        <p>{{data.dataFirstCity | currencyCheck:valute}}</p>
-        <P [ngStyle]="{'color': data.percentageFirstCity.startsWith('+') ? '#32cd32':'red'}">
-          {{data.percentageFirstCity}}
-        </P>
-      </div>
-    </td>
-    <td>
-      <div class="data">
-        <p>{{data.dataSecondCity | currencyCheck:valute}}</p>
-        <P [ngStyle]="{'color': data.percentageFirstCity.startsWith('+') ? '#32cd32':'red'}">
-          {{data.percentageSecondCity}}
-        </P>
-      </div>
-    </td>
-    <td>
-      <div class="data">
-        <p>{{data.dataThirdCity | currencyCheck: valute}}</p>
-        <P [ngStyle]="{'color': data.percentageFirstCity.startsWith('+') ? '#32cd32':'red'}">
-          {{data.percentageThirdCity}}
-        </P>
-      </div>
-    </td>
-  </tr>
-</ng-container>
-</tbody>
-</table>
+  <table style="width:100%;" id="marketTable" [appBlackbackground]="isdarkmodechecked === 'checked'">
+    <tr class="tableHead">
+      <th [appBlackbackground]="isdarkmodechecked === 'checked'"></th>
+      <th *ngFor="let c of cities" [ngClass]="{ blackbackground: isdarkmodechecked === 'checked' }">
+        <p>{{c.city}}</p>
+        <p class="units">{{c.unit}}</p>
+      </th>
+    </tr>
+    <tbody>
+      <ng-container *ngFor="let data of marketdatas">
+        <tr id="rowhover" (click)="selectedRow = data" [ngClass]="{'selected_row': selectedRow === data}"
+          *ngIf="data.show">
+          <td>{{data.metrics | uppercase}}</td>
+          <td>
+            <div class="data">
+              <p>{{data.dataFirstCity | currencyCheck:valute}}</p>
+              <P [ngStyle]="{'color': data.percentageFirstCity.startsWith('+') ? '#32cd32':'red'}">
+                {{data.percentageFirstCity}}
+              </P>
+            </div>
+          </td>
+          <td>
+            <div class="data">
+              <p>{{data.dataSecondCity | currencyCheck:valute}}</p>
+              <P [ngStyle]="{'color': data.percentageFirstCity.startsWith('+') ? '#32cd32':'red'}">
+                {{data.percentageSecondCity}}
+              </P>
+            </div>
+          </td>
+          <td>
+            <div class="data">
+              <p>{{data.dataThirdCity | currencyCheck: valute}}</p>
+              <P [ngStyle]="{'color': data.percentageFirstCity.startsWith('+') ? '#32cd32':'red'}">
+                {{data.percentageThirdCity}}
+              </P>
+            </div>
+          </td>
+        </tr>
+      </ng-container>
+    </tbody>
+  </table>
 </div>

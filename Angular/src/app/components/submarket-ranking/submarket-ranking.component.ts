@@ -10,14 +10,13 @@ import { SubmarketService } from 'src/app/services/submarket.service';
 })
 export class SubmarketRankingComponent implements OnInit{
   submarketrankings:{metric:string,name:string,price:string,percentage:string}[]=[];
-  ortedArr:any;
-  constructor(private submarketservice:SubmarketService, private sortPipe: SortPipe){}
+  sortedRankingData:any;
+
+  constructor(private submarketservice:SubmarketService, private sortPipe: SortPipe){};
+
   ngOnInit(): void {
     this.submarketrankings=this.submarketservice.submarketrankings;
-    // .sort(function (a, b) {
-    //   a[price]>b[price];
-    // });;
-    this.ortedArr = this.sortPipe.transform(this.submarketrankings, "asc", "price");
+    this.sortedRankingData = this.sortPipe.transform(this.submarketrankings, "asc", "price");
   }
 
   @Input() 
@@ -25,7 +24,4 @@ export class SubmarketRankingComponent implements OnInit{
 
   @Input() 
   selectedMatrix:any;
-
-
-  //this.submarketrankings.filter(this.selectedMatrix);
 }
