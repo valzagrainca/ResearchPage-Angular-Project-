@@ -1,0 +1,37 @@
+<div class="grid-container">
+  <app-header
+    class="header"
+    [appBlackbackground]="portfolioHeader.darkmodecheckbox === 'checked'"
+    [isdarkmodechecked]="portfolioHeader.darkmodecheckbox"
+  ></app-header>
+  <app-sidebar class="sidebar"></app-sidebar>
+  <div
+    class="portfolioHeader"
+    [appBlackbackground]="portfolioHeader.darkmodecheckbox === 'checked'"
+  >
+    <app-portfolio-header #portfolioHeader></app-portfolio-header>
+  </div>
+  <app-main-top
+    class="topmainbox"
+    [appBlackbackground]="portfolioHeader.darkmodecheckbox === 'checked'"
+    #maintop
+  ></app-main-top>
+  <app-table-market
+    class="tablebox"
+    [isdarkmodechecked]="portfolioHeader.darkmodecheckbox"
+    [valute]="maintop.selectedCurrency"
+    #selectedmatrix
+  >
+  </app-table-market>
+  <app-submarket-ranking
+    class="rankingbox"
+    [isdarkmodechecked]="portfolioHeader.darkmodecheckbox"
+    [selectedMatrix]="selectedmatrix.selectedRow"
+  ></app-submarket-ranking>
+  <app-main-bottom
+    class="bottomMainbox"
+    id="bottomdiv"
+    [isdarkmodechecked]="portfolioHeader.darkmodecheckbox"
+    [appBlackbackground]="portfolioHeader.darkmodecheckbox === 'checked'"
+  ></app-main-bottom>
+</div>

@@ -1,0 +1,16 @@
+.selectbox {
+    width: 50px;
+    height: 20px;
+    border: #3da3f5 2px solid;
+    text-align: center;
+    font-size: 15px;
+    cursor: pointer;
+    color:#3da3f5;
+}
+.selectbox:focus{
+    border: #3da3f5 2px solid;
+}
+
+option{
+    color: #3da3f5;
+}

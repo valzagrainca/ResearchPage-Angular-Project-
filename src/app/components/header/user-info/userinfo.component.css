@@ -1,0 +1,14 @@
+.username {
+  padding: 18px;
+  border-left: #dbe2e5 solid 2px;
+  display: flex;
+}
+.username p {
+  padding-top: 7px;
+  font-size: 13px;
+}
+.username i {
+  margin-left: 3px;
+  font-size: 20px;
+  padding-top: 7px;
+}

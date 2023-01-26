@@ -1,0 +1,17 @@
+.navbarstyle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
+  background-color: transparent;
+  border: 0;
+  color: #172b4d;
+  height: 100%;
+  padding-left:10px;
+}
+.user {
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  height: 60px;
+}
