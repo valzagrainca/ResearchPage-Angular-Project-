@@ -1,0 +1,54 @@
+#showhideMetrics {
+  display: flex;
+  color: #329dff;
+  cursor: pointer;
+}
+
+#showhideMetrics p {
+  margin-top: -2px;
+}
+
+.tooltiptext {
+  visibility: hidden;
+  background-color: #fff;
+  color: #172b4d;
+  text-align: center;
+  border-radius: 6px;
+  box-shadow: grey 0px 3px 8px;
+  text-align: left;
+  height: 530px;
+  width: 220px;
+  /* Position the tooltip */
+  position: absolute;
+  bottom: 5px;
+  z-index: 4;
+}
+
+.tooltipbottom {
+  border-top: #c5c5c5 1px solid;
+  color: #329dff;
+  padding-top: 15px;
+  padding-left: 15px;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.matrixdiv {
+  padding: 9px;
+  font-size: 14px;
+}
+
+.matrixdiv label {
+  padding-left: 5px;
+}
+
+.mapouter {
+  position: relative;
+  right: 196px;
+  bottom: 20px;
+}
+
+.blackbackground {
+  background-color: #172b4d;
+  color: white;
+}

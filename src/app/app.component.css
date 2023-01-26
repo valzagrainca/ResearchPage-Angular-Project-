@@ -1,0 +1,89 @@
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    "header header header"
+    "sidebar portfolioHeader portfolioHeader"
+    "sidebar topmainbox topmainbox"
+    "sidebar tablebox rankingbox"
+    "sidebar bottomMainbox bottomMainbox";
+  grid-template-rows: 7% 21% 13% 55% 14%;
+  grid-template-columns: 17% 53% 30%;
+}
+
+.header {
+  grid-area: header;
+  color: white;
+  background-color: #fff;
+  box-shadow: 3px 3px 10px grey;
+  z-index: 3;
+  position: fixed;
+  width: 100%;
+}
+
+.sidebar {
+  grid-area: sidebar;
+  background-color: #172b4d;
+  color: white;
+  font-size: 13px;
+  border-right: #dbe2e5 2px solid;
+}
+.portfolioHeader{
+  grid-area: portfolioHeader;
+  margin-top: 15px;
+  background-color: #fff;
+}
+
+.topmainbox {
+  grid-area: topmainbox;
+  display: flex;
+  justify-content: left;
+  padding: 10px;
+  background-color: #fff;
+  padding: 20px;
+  margin-top: 25px;
+  margin-left: 20px;
+  margin-right: 20px;
+  color: #172b4d;
+  border-bottom: 0;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+.tablebox {
+  grid-area: tablebox;
+  background-color: #fff;
+  color: #172b4d;
+  margin-left: 20px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+.rankingbox {
+  grid-area: rankingbox;
+  color: #172b4d;
+  padding: 20px;
+  margin-right: 20px;
+  background-color: #f0f2f5;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+.bottomMainbox {
+  grid-area: bottomMainbox;
+  display: flex;
+  background-color: #fff;
+  color: #172b4d;
+  padding: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  border-top: 0;
+  height: 60px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+.bottomMainbox i {
+  margin-right: 10px;
+}
+
+.blackbackground {
+  background-color: #172b4d;
+  color: white;
+}

@@ -1,0 +1,30 @@
+.market1 {
+  font-size: 19px;
+  font-weight: 600;
+}
+
+.market {
+  display: flex;
+  margin-left: 20px;
+}
+
+.market div {
+  width: 60px;
+  height: 21px;
+  border: #dbe2e5 2px solid;
+  text-align: center;
+  font-size: 12px;
+  border-radius: 2px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.currencybox{
+  padding-left:300px ;
+}
+.market div:first-child{
+  background-color: #e6f7ff;
+  color: #329dff;
+  border-right:0;
+}

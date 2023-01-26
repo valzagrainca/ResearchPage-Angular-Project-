@@ -1,0 +1,36 @@
+<div class="tooltip" id="showtable">
+  <div
+    id="showhideMetrics"
+    (click)="openMetrics()"
+    *ngIf="!displayMetrics; else hidematrix"
+  >
+    <i class="fa fa-plus"></i>
+    <p>Show Metrics</p>
+  </div>
+  <ng-template #hidematrix>
+    <div id="showhideMetrics" (click)="openMetrics()" style="color: red">
+      <i class="fa fa-minus"></i>
+      <p>Hide Metrics</p>
+    </div>
+  </ng-template>
+  <div
+    class="tooltiptext"
+    [appBlackbackground]="isdarkmodechecked === 'checked'"
+    [ngStyle]="{ visibility: displayMetrics ? 'visible' : 'hidden' }"
+  >
+    <div class="matrixdiv" *ngFor="let metric of metrics">
+      <input
+        type="checkbox"
+        value="metric.metrics"
+        [checked]="metric.show"
+        (change)="changeStatus(metric.metrics)"
+      />
+       <!-- (change)="changeStatus(metric.id)" -->
+      <label for="metric.metrics">{{ metric.metrics }}</label
+      ><br />
+    </div>
+    <div class="tooltipbottom">
+      <p (click)="DefaultMetrics()">Resert to Default</p>
+    </div>
+  </div>
+</div>

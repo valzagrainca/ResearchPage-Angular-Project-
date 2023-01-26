@@ -1,0 +1,28 @@
+.researchfilers {
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #dbe2e5;
+    z-index: 2;
+    font-size: 31px;
+    font-weight: 600;
+    height:70%;
+  }
+  
+  .underfiltersbox {
+    padding: 10px;
+    display: flex;
+    justify-content: right;
+    box-shadow: 3px 3px 8px grey;
+  }
+
+  .binfo {
+    display: flex;
+    margin-right: 10px;
+    font-size: 15px;
+  }
+  
+  .binfo p {
+    margin-right: 5px;
+  }

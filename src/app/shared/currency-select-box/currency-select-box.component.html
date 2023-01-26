@@ -1,0 +1,7 @@
+<select #currency
+  class="selectbox"
+ (change)="onCurrencyValueChange(currency.value)">
+    <option value="USD" >$</option>
+    <option value="EUR">€</option>
+    <option value="Pound">£</option>
+  </select>

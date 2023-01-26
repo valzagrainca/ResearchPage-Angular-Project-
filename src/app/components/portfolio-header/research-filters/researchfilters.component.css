@@ -1,0 +1,25 @@
+.filterdiv {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.selectbox {
+  display: grid;
+  margin-left: 10px;
+}
+
+.selectbox select {
+  width: 200px;
+  height: 35px;
+  border-color: #c5c5c5;
+  border-radius: 3px;
+  color: #404349;
+}
+
+.selectbox label {
+  color: #7f91b1;
+  font-size: 12px;
+  font-weight: normal;
+  margin-bottom: 5px;
+}
