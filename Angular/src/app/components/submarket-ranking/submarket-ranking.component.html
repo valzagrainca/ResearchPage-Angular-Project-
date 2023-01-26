@@ -6,7 +6,7 @@
     <p class="ranking" *ngFor="let number of [1, 2, 3, 4, 5]">{{ number }}st</p>
   </div>
   <div class="rightmarketdiv">
-    <ng-container *ngFor="let ranking of submarketrankings">
+    <ng-container *ngFor="let ranking of ortedArr">
       <div
       class="sidedivs"
       *ngIf="selectedMatrix.metrics === ranking.metric"

@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { SortPipe } from 'src/app/pipes/sort.pipe';
 import { SubmarketService } from 'src/app/services/submarket.service';
 
 @Component({
@@ -9,12 +10,14 @@ import { SubmarketService } from 'src/app/services/submarket.service';
 })
 export class SubmarketRankingComponent implements OnInit{
   submarketrankings:{metric:string,name:string,price:string,percentage:string}[]=[];
-  constructor(private submarketservice:SubmarketService){}
+  ortedArr:any;
+  constructor(private submarketservice:SubmarketService, private sortPipe: SortPipe){}
   ngOnInit(): void {
     this.submarketrankings=this.submarketservice.submarketrankings;
     // .sort(function (a, b) {
     //   a[price]>b[price];
     // });;
+    this.ortedArr = this.sortPipe.transform(this.submarketrankings, "asc", "price");
   }
 
   @Input() 

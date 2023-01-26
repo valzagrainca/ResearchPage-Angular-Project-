@@ -19,6 +19,7 @@ import { PortfolioHeaderComponent } from './components/portfolio-header/portfoli
 import { BlackBackgroundDirective } from './directives/black-background.directive';
 import { CurrencyCheckPipe } from './pipes/currency-check.pipe';
 import { CurrencySelectBoxComponent } from './shared/currency-select-box/currency-select-box.component';
+import { SortPipe } from './pipes/sort.pipe';
 
 @NgModule({
   declarations: [
@@ -39,9 +40,10 @@ import { CurrencySelectBoxComponent } from './shared/currency-select-box/currenc
     BlackBackgroundDirective,
     CurrencyCheckPipe,
     CurrencySelectBoxComponent,
+    SortPipe,
   ],
   imports: [BrowserModule, AppRoutingModule],
-  providers: [],
+  providers: [SortPipe],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
