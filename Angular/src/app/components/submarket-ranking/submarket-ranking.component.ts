@@ -16,7 +16,7 @@ export class SubmarketRankingComponent implements OnInit{
 
   ngOnInit(): void {
     this.submarketrankings=this.submarketservice.submarketrankings;
-    this.sortedRankingData = this.sortPipe.transform(this.submarketrankings, "asc", "price");
+    this.sortedRankingData = this.sortPipe.transform(this.submarketrankings, "desc", "price");
   }
 
   @Input() 
