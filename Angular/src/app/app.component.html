@@ -11,27 +11,9 @@
   >
     <app-portfolio-header #portfolioHeader></app-portfolio-header>
   </div>
-  <app-main-top
-    class="topmainbox"
-    [appBlackbackground]="portfolioHeader.darkmodecheckbox === 'checked'"
-    #maintop
-  ></app-main-top>
-  <app-table-market
-    class="tablebox"
-    [isdarkmodechecked]="portfolioHeader.darkmodecheckbox"
-    [valute]="maintop.selectedCurrency"
-    #selectedmatrix
-  >
-  </app-table-market>
-  <app-submarket-ranking
-    class="rankingbox"
-    [isdarkmodechecked]="portfolioHeader.darkmodecheckbox"
-    [selectedMatrix]="selectedmatrix.selectedRow"
-  ></app-submarket-ranking>
-  <app-main-bottom
-    class="bottomMainbox"
-    id="bottomdiv"
-    [isdarkmodechecked]="portfolioHeader.darkmodecheckbox"
-    [appBlackbackground]="portfolioHeader.darkmodecheckbox === 'checked'"
-  ></app-main-bottom>
+  <div class="mainbox">
+    <!-- <app-trends [portofolioStatus]="portfolioHeader.darkmodecheckbox"></app-trends>
+  <app-employment></app-employment> -->
+    <router-outlet></router-outlet>
+  </div>
 </div>

@@ -13,7 +13,7 @@ td {
 th {
   background-color: #fff;
   border: 0.5px solid #dbe2e5;
-  height: 120px;
+  height: 130px;
   width: 25%;
 }
 
@@ -58,10 +58,12 @@ td:first-child {
   background-color: #e6f7ff;
   color: #329dff;
 }
-.tableHead{
-  position:sticky;
-  top:0;
+
+.tableHead {
+  position: sticky;
+  top: 0;
 }
+
 .blackbackground {
   background-color: #172b4d;
   color: white;

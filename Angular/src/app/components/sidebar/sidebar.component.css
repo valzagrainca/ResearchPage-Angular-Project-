@@ -1,7 +1,7 @@
 .sidelist {
     list-style-type: none;
     position: fixed;
-    padding-top: 30px;
+    padding-top: 15px;
     padding-left: 0;
     width: 231px;
 }
@@ -10,6 +10,11 @@
     padding: 15px;
     width: 100%;
     font-size: 12px;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
 }
 
 .sidelist li:nth-child(1) {
@@ -22,7 +27,7 @@
     border-left: #2ecc71 solid 8px;
 }
 
-.sidelist li:nth-child(2) {
+.active {
     background-color: #1e3b65;
     border-left: #2ecc71 solid 8px;
 }

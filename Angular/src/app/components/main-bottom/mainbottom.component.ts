@@ -21,13 +21,15 @@ export class MainbottomComponent implements OnInit {
     show: boolean;
   }[] = [];
 
-  @Input()
   isdarkmodechecked: string = 'notchecked';
 
   displayMetrics: boolean = false;
 
   ngOnInit(): void {
     this.metrics = this.metricservice.metrics;
+    this.metricservice.darkmodeStatus.subscribe(
+      (darkmode) => (this.isdarkmodechecked = darkmode)
+    );
   }
 
   openMetrics() {
@@ -39,15 +41,16 @@ export class MainbottomComponent implements OnInit {
     console.log(this.isdarkmodechecked);
   }
 
-  changeStatus(metricname: string){
+  changeStatus(metricname: string) {
     var foundIndex = this.metricservice.metrics.findIndex(
-      metric=>metric.metrics === metricname
+      (metric) => metric.metrics === metricname
     );
-    this.metricservice.metrics[foundIndex].show=!this.metricservice.metrics[foundIndex].show;
+    this.metricservice.metrics[foundIndex].show =
+      !this.metricservice.metrics[foundIndex].show;
   }
 
-  DefaultMetrics(){
+  DefaultMetrics() {
     this.metricservice.ResetValuesToDefault();
   }
-
+  
 }

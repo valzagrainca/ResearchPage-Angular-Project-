@@ -1,0 +1,27 @@
+<div class="container" [appBlackbackground]="portofolioStatus === 'checked'">
+    <app-main-top
+class="topmainbox"
+[appBlackbackground]="portofolioStatus === 'checked'"
+[title]="title"
+#maintop
+></app-main-top>
+<div class="marketcontainer">
+    <app-table-market
+    class="tablebox"
+    [isdarkmodechecked]="portofolioStatus"
+    [valute]="maintop.selectedCurrency"
+    #selectedmatrix
+    >
+    </app-table-market>
+    <app-submarket-ranking
+    class="rankingbox"
+    [isdarkmodechecked]="portofolioStatus"
+    [selectedMatrix]="selectedmatrix.selectedRow"
+    ></app-submarket-ranking>
+</div>
+<app-main-bottom
+class="bottomMainbox"
+id="bottomdiv"
+[appBlackbackground]="portofolioStatus === 'checked'"
+></app-main-bottom>
+</div>

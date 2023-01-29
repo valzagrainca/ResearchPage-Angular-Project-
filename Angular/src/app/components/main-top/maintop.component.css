@@ -20,11 +20,13 @@
   justify-content: center;
   align-items: center;
 }
-.currencybox{
-  padding-left:300px ;
+
+.currencybox {
+  padding-left: 300px;
 }
-.market div:first-child{
+
+.market div:first-child {
   background-color: #e6f7ff;
   color: #329dff;
-  border-right:0;
+  border-right: 0;
 }

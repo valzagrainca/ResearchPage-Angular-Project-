@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { BehaviorSubject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -34,4 +35,11 @@ export class MetricService {
       }
     });
   }
+
+  private darkmode = new BehaviorSubject<string>('notchecked');
+  darkmodeStatus = this.darkmode.asObservable();
+  changeDarkmodeStatus(data: string){
+    this.darkmode.next(data);
+  }
+
 }

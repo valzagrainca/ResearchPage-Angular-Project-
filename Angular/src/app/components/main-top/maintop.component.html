@@ -1,11 +1,12 @@
-<div style="display: flex">
-  <div class="market1">Market Snapshot</div>
-  <div class="market">
+<div style="display: flex;" >
+  <div class="market1">{{title}}</div>
+  <div class="market" *ngIf="title != 'Employment'">
     <div>Market</div>
     <div>Map</div>
   </div>
   <app-currency-select-box
     (currencychanged)="onChangedCurrency($event)"
     class="currencybox"
+    *ngIf="title != 'Employment'"
   ></app-currency-select-box>
 </div>

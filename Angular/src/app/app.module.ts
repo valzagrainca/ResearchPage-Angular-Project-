@@ -20,6 +20,8 @@ import { BlackBackgroundDirective } from './directives/black-background.directiv
 import { CurrencyCheckPipe } from './pipes/currency-check.pipe';
 import { CurrencySelectBoxComponent } from './shared/currency-select-box/currency-select-box.component';
 import { SortPipe } from './pipes/sort.pipe';
+import { EmploymentComponent } from './components/employment/employment/employment.component';
+import { TrendsComponent } from './components/trends/trends/trends.component';
 
 @NgModule({
   declarations: [
@@ -41,6 +43,8 @@ import { SortPipe } from './pipes/sort.pipe';
     CurrencyCheckPipe,
     CurrencySelectBoxComponent,
     SortPipe,
+    EmploymentComponent,
+    TrendsComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [SortPipe],
